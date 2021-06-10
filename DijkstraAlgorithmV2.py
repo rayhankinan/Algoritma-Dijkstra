@@ -244,7 +244,6 @@ def getInput():
             answer.remove(answer[0])
             for i in range(0, len(answer)):
                 pathTravelled = pathTravelled + str(answer[i]) + " "
-            not_answer = [edge[i] for i in range(len(edge)) if edge[i] not in answer]
 
             nx.draw_networkx_edges(DG, pos, edgelist=answer, edge_color="r")
             props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
