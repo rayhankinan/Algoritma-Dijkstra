@@ -1,6 +1,5 @@
 '''
 Dijkstra's Algorithm untuk mencari shortest path antara dua node
-
 Sumber Pseudocode : Pemrograman Kompetitif Dasar
 1. Pilih sebuah node yang belum dikunjungi dan memiliki dist terkecil. Sebut saja node
 ini sebagai u.
@@ -24,7 +23,7 @@ import tkinter
 import networkx as nx
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.backend_bases import key_press_handler
 from tkinter import BooleanVar
 
@@ -87,7 +86,6 @@ def getJumlahEdge():
     global button1
     global pos
     global canvas
-    global toolbar
 
     m = int(entry1.get())
     index = 0
@@ -239,7 +237,6 @@ def getInput():
             global button1
             global pos
             global canvas
-            global toolbar
 
             endNode = int(entry1.get())
             answer = Dijkstra(adjMatrix, startNode, endNode)
@@ -371,10 +368,6 @@ if __name__ == "__main__":
     plt.gca().axes.xaxis.set_ticks([])
     plt.gca().axes.yaxis.set_ticks([])
     canvas.draw()
-    canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-    toolbar = NavigationToolbar2Tk(canvas, root)
-    toolbar.update()
     canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
     start()
