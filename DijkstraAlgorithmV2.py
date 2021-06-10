@@ -279,13 +279,6 @@ def getInput():
         block.set(True)
         root.wait_variable(block)
 
-    button1.destroy()
-    label1.destroy()
-    entry1.delete(0, 'end')
-    entry1.insert(0, "")
-
-    start()
-
 def _quit():
     root.quit()
     root.destroy()
