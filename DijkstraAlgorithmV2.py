@@ -24,7 +24,6 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.backend_bases import key_press_handler
 from tkinter import BooleanVar
 
 def start():
